@@ -16,8 +16,11 @@ public class Word {
     /** Miwok translation for the word */
     private String mMiwokTranslation;
 
+    /** Image Resource for the word */
+    private int mImageResource;
+
     /**
-     * Create a new Word object.
+     * Create a new Word object for phrase activity as it only require two parameters.
      *
      * @param defaultTranslation is the word in a language that the user is already familiar with
      *                           (such as English)
@@ -26,6 +29,21 @@ public class Word {
     public Word(String defaultTranslation, String miwokTranslation) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+
+    }
+   /**
+    * Create a new Word object for color, number, family activity as it requires three parameters.
+    *
+    * @param defaultTranslation is the word in a language that the user is already familiar with
+    *                      (such as English)
+    * @param miwokTranslation is the word in the Miwok language
+    *
+    *  @param imageResource is the image representation in Miwok words
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int imageResource) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mImageResource = imageResource;
     }
 
     /**
@@ -40,6 +58,12 @@ public class Word {
      */
     public String getMiwokTranslation() {
         return mMiwokTranslation;
+    }
+    /**
+     * Ge the Image Resourse ID of the word
+     */
+    public int getImageResourceId() {
+        return mImageResource;
     }
 
 }
