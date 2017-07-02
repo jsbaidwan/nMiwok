@@ -19,6 +19,11 @@ public class Word {
     /** Image Resource for the word */
     private int mImageResource;
 
+    /** Constant that represent no image state
+     *  Its value is -1 because it's out of the range of possible valid resource ID
+     *  */
+    private static final int NO_IMAGE_PROVIDED = -1;
+
     /**
      * Create a new Word object for phrase activity as it only require two parameters.
      *
@@ -64,6 +69,12 @@ public class Word {
      */
     public int getImageResourceId() {
         return mImageResource;
+    }
+    /**
+     *  Returns whether or not there is an image for this Word
+     */
+    public boolean hasImage()   {
+        return mImageResource != NO_IMAGE_PROVIDED;
     }
 
 }
