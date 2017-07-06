@@ -20,6 +20,7 @@ public class Word {
     private int mImageResource;
 
     /** Audio Resource for the word */
+    private int mAudioResource;
 
 
     /** Constant that represent no image state
@@ -34,9 +35,10 @@ public class Word {
      *                           (such as English)
      * @param miwokTranslation is the word in the Miwok language
      */
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioResource) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResource = audioResource;
 
     }
    /**
@@ -48,10 +50,11 @@ public class Word {
     *
     *  @param imageResource is the image representation in Miwok words
      */
-    public Word(String defaultTranslation, String miwokTranslation, int imageResource) {
+    public Word(String defaultTranslation, String miwokTranslation, int imageResource, int audioResource) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResource = imageResource;
+        mAudioResource = audioResource;
     }
 
     /**
@@ -68,11 +71,15 @@ public class Word {
         return mMiwokTranslation;
     }
     /**
-     * Ge the Image Resourse ID of the word
+     * Get the Image Resourse ID of the word
      */
     public int getImageResourceId() {
         return mImageResource;
     }
+    /**
+     * Get the Audio Resource ID of the word
+     */
+    public int getAudioResourceId()   {return mAudioResource; }
     /**
      *  Returns whether or not there is an image for this Word
      */
