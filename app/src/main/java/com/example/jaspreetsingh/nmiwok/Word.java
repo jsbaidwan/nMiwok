@@ -19,6 +19,9 @@ public class Word {
     /** Image Resource for the word */
     private int mImageResource;
 
+    /** Audio Resource for the word */
+
+
     /** Constant that represent no image state
      *  Its value is -1 because it's out of the range of possible valid resource ID
      *  */

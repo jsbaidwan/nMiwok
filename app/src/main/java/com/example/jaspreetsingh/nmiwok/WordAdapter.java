@@ -73,6 +73,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
             // Otherwise hide the imageView (Set the visibility to GONE)
             iconImageView.setVisibility(View.GONE);
 
+
         // Set the theme color for the list item
         View textContainer = listItemView.findViewById(R.id.text_container);
         // Find the color that the resource ID maps to
