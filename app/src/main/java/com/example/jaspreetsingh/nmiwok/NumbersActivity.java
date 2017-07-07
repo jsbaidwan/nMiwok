@@ -67,6 +67,9 @@ public class NumbersActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener()   {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)  {
+                // Release the media player if it currently exists because we are about to
+                // play a different sound file
+                releaseMediaPlayer();
                 // Get the {@link Word} object at the given position the user clicked on
                 Word word = words.get(position);
                 // Create and setup the {@link MediaPlayer} for the audio resource associated with
